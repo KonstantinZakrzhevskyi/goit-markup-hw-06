@@ -709,3 +709,9 @@ img {
   width: 11px;
   height: 11px;
 }
+
+/* modal rorm */
+
+textarea {
+  resize: none;
+}

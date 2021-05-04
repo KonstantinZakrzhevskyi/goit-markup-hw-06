@@ -8,14 +8,15 @@
   --secondary-bg-color: #f5f4fa;
   --dark-bg-color: #2f303a;
   --project-indent: 30px;
-  --main-font: 'Roboto', sans-serif;
-  --logo-font: 'Raleway', sans-serif;
   --border-color: #ececec;
   --border-card-content: #eeeeee;
   --color-icons: #afb1b8;
   --footer-social-icons-bg-color: rgba(255, 255, 255, 0.1);
   --backdrop-bg: rgba(0, 0, 0, 0.2);
   --actions-bg: rgba(33, 150, 243, 0.9);
+  --form-border-color: rgba(33, 33, 33, 0.2);
+  --main-font: 'Roboto', sans-serif;
+  --logo-font: 'Raleway', sans-serif;
   --duration: 250ms;
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -218,9 +219,12 @@ img {
 
 /* button */
 .button {
-  border-radius: 4px;
   padding: 10px 32px;
   min-width: 200px;
+  border-radius: 4px;
+  border-color: transparent;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-color: transparent;
   color: var(--premari-white-color);
   background-color: var(--accent-color);
   font-weight: 700;
@@ -712,6 +716,39 @@ img {
 
 /* modal rorm */
 
+.form {
+  outline: 2px solid red;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+}
+.form-title {
+  margin-bottom: 12px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 28px;
+}
+.form-ladel {
+  margin-bottom: 4px;
+}
+
+.form-input {
+  border: 1px solid var(--form-border-color);
+  border-radius: 4px;
+}
+
+/* .form-svg {
+  fill: var(--subtitle-text-color);
+} */
+
 textarea {
   resize: none;
 }
+
+/* label input[type='checkbox'] {
+  display: flex;
+  align-items: center;
+} */

@@ -234,6 +234,7 @@ textarea {
 
 /* button */
 .button {
+  text-align: center;
   padding: 10px 32px;
   min-width: 200px;
   height: 50px;
@@ -902,4 +903,10 @@ textarea {
 }
 .checkbox-link {
   color: var(--accent-color);
+}
+
+.button.btn-modal {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
 }

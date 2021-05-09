@@ -48,6 +48,17 @@ body {
   letter-spacing: 0, 03em;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .logo,
 .link,
 .footer-text,
@@ -558,7 +569,6 @@ textarea {
   margin-left: auto;
 }
 
-
 .subscription-text {
   display: block;
   margin-bottom: 20px;
@@ -590,7 +600,7 @@ textarea {
 }
 
 .subscription > .button {
-    display: inline-flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-left: 12px;
@@ -851,6 +861,13 @@ textarea {
   cursor: pointer;
 }
 
+.form-textarea::placeholder {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: rgba(117, 117, 117, 0.5);
+}
+
 .form-textarea:hover,
 .form-textarea:focus {
   border-color: var(--accent-color);
@@ -858,44 +875,31 @@ textarea {
 
 /* checkbox */
 
-.checkbox-field {
-  position: relative;
-  margin-bottom: 30px;
+.checkbox-label {
   display: flex;
   align-items: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 1.71;
 }
 
 .checkbox-icon {
-  display: inline-block;
   width: 16px;
   height: 15px;
   margin-right: 8px;
-  border: 2px solid var(--title-text-color);
+  border: 1px solid var(--title-text-color);
   border-radius: 2px;
   transition: background-color var(--duration) var(--timing-function),
     border-color var(--duration) var(--timing-function);
 }
 
-.checkbox-icon-check {
-position: absolute;
-opacity: 0;
-  transition: opacity var(--duration) var(--timing-function);
-}
-
-.checkbox-input {
-font-size: 14px;
-line-height: 1.71;
-Letter spacing: 3%
-}
-
-.checkbox-input:checked ~ .checkbox-icon-check {
-  opacity: 1;
+.checkbox-input:checked + .checkbox-icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-image: url(../images/modal-check.svg);
+  background-size: contain;
 }
 .checkbox-link {
   color: var(--accent-color);
 }
-
-/* label input[type='checkbox'] {
-  display: flex;
-  align-items: center;
-} */

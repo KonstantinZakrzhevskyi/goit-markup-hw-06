@@ -851,6 +851,7 @@ textarea {
 }
 
 .form-textarea {
+  height: 120px;
   padding: 12px 16px;
   font-size: 14px;
   line-height: 1.14;
